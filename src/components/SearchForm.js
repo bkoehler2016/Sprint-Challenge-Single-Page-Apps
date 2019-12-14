@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 const Buttons = styles.button`
 margin: 10px;
+background-color: blue;
+color: white;
 `;
 
 export default function SearchForm() {
