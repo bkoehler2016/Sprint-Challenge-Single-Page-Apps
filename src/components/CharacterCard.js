@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Cards = styled.div`
   border: 1px solid black;
   margin: 2%;
-  background-color: lightblue;
+  background-color: #abd5ec;
   border-radius: 10px;
   padding: 3%;
 `;
