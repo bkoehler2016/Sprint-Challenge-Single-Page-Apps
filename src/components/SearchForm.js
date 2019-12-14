@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styles from "styled-components";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
+
+const Buttons = styles.button`
+margin: 10px;
+`;
 
 export default function SearchForm() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/character").then(response => {
-      const characters = response.data.rsults.filter(char =>
-        char.name.toLowerCase().inclues(query.toLowerCase())
+    axios.get("https://rickandmortyapi.com/api/character/").then(response => {
+      const characters = response.data.results.filter(char =>
+        char.name.toLowerCase().includes(query.toLowerCase())
       );
       setData(characters);
     });
@@ -19,7 +24,6 @@ export default function SearchForm() {
   const handleInputChange = event => {
     setQuery(event.target.value);
   };
-
   return (
     <div>
       <form>
@@ -33,7 +37,7 @@ export default function SearchForm() {
         />
 
         <Link to="/">
-          <button>Home</button>
+          <Buttons>Home</Buttons>
         </Link>
       </form>
 

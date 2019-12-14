@@ -12,9 +12,9 @@ const Cards = styled.div`
 export default function CharacterCard({ name, species, status }) {
   return (
     <Cards>
-      <h3>Name: {name}</h3>
-      <p>Species: {species}</p>
-      <p>Status: {status}</p>
+      <h3>Name:{name}</h3>
+      <p>Species:{species}</p>
+      <p>Status:{status}</p>
     </Cards>
   );
 }
