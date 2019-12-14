@@ -4,7 +4,7 @@ import styles from "styled-components";
 
 const Buttons = styles.button`
 margin: 10px;
-background-color: blue;
+background-color: green;
 color: white;
 `;
 const Page = styles.section`
